@@ -1,0 +1,83 @@
+.ofertas{
+    background-color: aliceblue;
+}
+
+.navbar-ofertas{
+    background-image: url("./img-hero.avif");
+    display: flex;
+    height: 300px;
+}
+
+.ul-links-ofertas{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.ul-links-ofertas p{
+    color: white;
+    border-bottom: 1px solid blueviolet;
+}
+
+.icon-carrito{
+    color: white;
+    
+}
+.cont-prendas-oferta{
+    display: flex;
+    width: 50%;
+  
+    
+}
+
+.prendas-oferta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    margin-left: 20%;
+    border: 2px solid blue;
+    margin-top: 7%;
+}
+
+.img-oferta{
+    width: 70%;
+   height: 270px;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERYS  */
+
+
+
+@media(max-width:480px){
+
+.prendas-oferta{
+    width: 100%;
+}
+
+.img-oferta{
+    height: 240px;
+}
+
+}

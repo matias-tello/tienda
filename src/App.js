@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Hero from './components/Hero';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import Pago from './components/Pago';
+import Ropa from './components/Ropa';
+import Carrito from './components/Carrito';
+import { ElementoProvider } from './components/Context';
+import Formulario from './components/Formulario';
+import Ofertas from './components/Ofertas';
+import CollapsibleExample from './components/Hero';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+
+      <ElementoProvider>
+        
+        <Switch>
+
+          <Route exact path="/carrito" component={Carrito} />
+          <Route exact path="/registrarse" component={ Formulario}/>
+          <Route exact path="/ofertas" component={Ofertas}/>
+          <Route path="/">
+
+            <Hero />
+
+            <Pago />
+
+            <Ropa />
+
+          </Route>
+
+        </Switch>
+
+      </ElementoProvider>
+
+    </BrowserRouter>
   );
 }
 
