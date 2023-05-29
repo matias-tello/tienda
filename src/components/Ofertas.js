@@ -100,9 +100,9 @@ console.log(PrendasOfertas)
 
  <div className="prendas-oferta">
         <h1 className="title-oferta"> {prenda.title} </h1>
-        <h3>  ${prenda.price} </h3> 
+        <h3 className="precio-prenda">  ${prenda.price} </h3> 
         <img src={prenda.image} className="img-oferta" />
-        <button onClick={() => handleItemClick(prenda)} >Comprar</button>
+        <button onClick={() => handleItemClick(prenda)} className="btn-comprar" >Comprar</button>
 
       </div>
  </div>
